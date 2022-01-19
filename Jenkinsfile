@@ -2,9 +2,6 @@
 pipeline {
     agent any
     }
-    node {
-    def SONARQUBE_HOSTNAME = 'sonarqube'
-    }
     stages {
         stage('Build') {
             steps {
