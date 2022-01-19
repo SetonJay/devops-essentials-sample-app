@@ -1,3 +1,4 @@
+def sonarqubeScannerHome = tool name: 'sonar', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
 pipeline {
     agent any
     stages {
@@ -9,7 +10,6 @@ pipeline {
             }
         }
         stage('sonar-scanner') {
-            def sonarqubeScannerHome = tool name: 'sonar', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
             when {
                 branch 'master'
             }
